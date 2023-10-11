@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.83.1" /><link rel="canonical" type="text/html" href="../../../../../docs/manual/advanced/formats/">
-<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.110.0">
+<link rel="canonical" type="text/html" href="../../../../../docs/manual/advanced/formats/">
+<meta name="robots" content="noindex, nofollow">
 
 
 <link rel="shortcut icon" href="../../../../../favicons/favicon.ico" >
@@ -19,11 +20,11 @@
 <link rel="icon" type="image/png" href="../../../../../favicons/android-192x192.png" sizes="192x192">
 
 <title>Formats | CVAT</title>
-<meta name="description" content=""><meta property="og:title" content="Formats" />
+<meta name="description" content="List of annotation formats supported by CVAT.">
+<meta property="og:title" content="Formats" />
 <meta property="og:description" content="List of annotation formats supported by CVAT." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/docs/manual/advanced/formats/" /><meta property="og:site_name" content="CVAT" />
-
 <meta itemprop="name" content="Formats">
 <meta itemprop="description" content="List of annotation formats supported by CVAT."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Formats"/>
@@ -32,149 +33,83 @@
 
 
 
-<link rel="preload" href="../../../../../scss/main.min.591a88c412fca6c692021fe322184768cfc320012e0a443e8514b68fd373aa21.css" as="style">
-<link href="../../../../../scss/main.min.591a88c412fca6c692021fe322184768cfc320012e0a443e8514b68fd373aa21.css" rel="stylesheet" integrity="">
-
-
-<script
-  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-  crossorigin="anonymous"></script>
+<link rel="preload" href="../../../../../scss/main.min.5176d9fef59ea153ab767b7b61a90b35fb24ef3fb7aef25530f05dcb464a2db0.css" as="style">
+<link href="../../../../../scss/main.min.5176d9fef59ea153ab767b7b61a90b35fb24ef3fb7aef25530f05dcb464a2db0.css" rel="stylesheet" integrity="">
 
 <script
-  src="https://unpkg.com/lunr@2.3.8/lunr.min.js"
-  integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
   crossorigin="anonymous"></script>
-
-
-
+<script defer
+  src="https://unpkg.com/lunr@2.3.9/lunr.min.js"
+  integrity="sha384-203J0SNzyqHby3iU6hzvzltrWi/M41wOP5Gu+BiJMz5nwKykbkUx8Kp7iti0Lpli"
+  crossorigin="anonymous"></script>
 <link rel="stylesheet" href="../../../../../css/prism.css"/>
-
-
-
 
   </head>
   <body class="td-section">
     <header>
-      
-
-
-<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
-        <a class="navbar-brand" href="../../../../../about/">
-    <span class="navbar-logo"><svg width="98" height="27" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M101 0v29l-52.544.001C44.326 35.511 35.598 40 25.5 40 11.417 40 0 31.27.0 20.5S11.417 1 25.5 1c4.542.0 8.807.908 12.5 2.5V0h63z" id="logoA"/></defs><g transform="translate(-2 -1)" fill="none" fill-rule="evenodd"><mask id="logoB" fill="#fff"><use xlink:href="#logoA"/></mask><path d="M48.142 1c4.736.0 6.879 3.234 6.879 5.904v2.068h-4.737V6.904c0-.79-.789-2.144-2.142-2.144-1.654.0-2.368 1.354-2.368 2.144v15.192c0 .79.714 2.144 2.368 2.144 1.353.0 2.142-1.354 2.142-2.144v-2.068h4.737v2.068c0 2.67-2.143 5.904-6.88 5.904C42.956 28 41 24.766 41 22.134V6.904C41 4.234 42.955 1 48.142 1zM19-6c9.389.0 17 7.611 17 17s-7.611 17-17 17S2 20.389 2 11 9.611-6 19-6zm42.256 7.338 3.345 19.48h.075l3.42-19.48h5l-6.052 26.324h-5L56.22 1.338h5.037zm20.706.0 5.413 26.324h-4.699l-.94-6.13h-4.548l-.902 6.13h-4.435l5.413-26.324h4.698zm18.038.0v3.723h-4.849v22.6h-4.699v-22.6h-4.81V1.338H1e2zM19 4a7 7 0 100 14 7 7 0 000-14zm60.557 4.295h-.113l-1.466 9.439h3.007l-1.428-9.439z" fill="#fff" fill-rule="nonzero" mask="url(#logoB)"/></g></svg></span>
-  </a>
-  <div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
-    <ul class="navbar-nav mt-2 mt-lg-0">
-      
-      
-      <li class="nav-item mr-4 mb-2 mb-lg-0">
-        
-        
-        
-        
-        
-        
-        
-        
-        <a class="nav-link active" href="../../../../../docs/" ><span class="active">Documentation</span></a>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="../../../../../about/"><span class="navbar-brand__logo navbar-logo"><svg width="80" height="15" viewBox="0 0 80 15" xmlns="http://www.w3.org/2000/svg"><path d="M6.63399 15C2.37083 15 0 12.5333.0 7.48889.0 2.46667 2.34908.0 6.63399.0H10.6576V2.62222H6.63399c-2.84935.0-4.0674 1.44445-4.0674 4.86667.0 3.44441 1.2398 4.88891 4.0674 4.88891H15.0638V15H6.63399z"/><path d="M22.412.0l4.8346 13.1004C27.7814 14.5415 28.8724 15 30.2842 15 31.7817 15 32.7657 14.476 33.3005 13.1004L38.3918.0H35.5895L30.9902 11.8559C30.8404 12.2052 30.6265 12.3581 30.2842 12.3581 29.942 12.3581 29.7067 12.2052 29.5783 11.8559L25.1929.0H22.412z"/><path d="M53.0989 3.1441C53.2487 2.79476 53.484 2.64192 53.8262 2.64192 54.1685 2.64192 54.4038 2.79476 54.5322 3.1441L58.9176 15h2.8023L56.8425 1.89956C56.3291.524017 55.3451.0 53.8476.0 52.3288.0 51.3448.524017 50.81 1.89956L45.74 15h2.781L53.0989 3.1441z"/><path d="M69.0681.0V2.5665H73.2661V15H75.802V2.5665H80V0H69.0681z"/></svg></span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" style="height: auto;" id="main_navbar">
+    <ul class="navbar-nav d-flex flex-wrap" style="padding-bottom: 0;">
+      <li class="nav-item">
+        <a class="nav-link active" href="../../../../../docs/"><span>Documentation</span></a>
       </li>
-      
-      <li class="nav-item mr-4 mb-2 mb-lg-0">
-        
-        
-        
-        
-        
-        
-        
-        
-        <a class="nav-link" href="../../../../../about/" ><span>About</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="../../../../../about/"><span>About</span></a>
       </li>
-      
-      <li class="nav-item mr-4 mb-2 mb-lg-0">
-        
-        
-        
-        
-        
-        
-        <a class="nav-link" href="https://app.cvat.ai"  ><span>Try it now</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="https://app.cvat.ai" rel="noopener"><span>Try it now</span></a>
       </li>
-      
-      <li class="nav-item mr-4 mb-2 mb-lg-0">
-        
-        
-        
-        
-        
-        
-        <a class="nav-link" href="https://github.com/cvat-ai/cvat"  ><i class='fab fa-github'></i><span>GitHub</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/cvat-ai/cvat" rel="noopener"><i class='fab fa-github'></i><span>GitHub</span></a>
       </li>
-      
-      
-        
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-target="#dropdown_ver" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            v1.6.0
-          </a>
-        </li>
-        
-      
-      
+      <li class="nav-item dropdown d-none d-lg-block">
+        <div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">v1.6.0</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="../../../../../../">Latest version</a></li>
+    <li><a class="dropdown-item" href="../../../../../../v1.5.0">v1.5.0</a></li>
+    <li><a class="dropdown-item" href="../../../../../../v1.6.0">v1.6.0</a></li>
+    <li><a class="dropdown-item" href="../../../../../../v1.7.0">v1.7.0</a></li>
+    <li><a class="dropdown-item" href="../../../../../../v2.0.0">v2.0.0</a></li>
+    <li><a class="dropdown-item" href="../../../../../../v2.1.0">v2.1.0</a></li>
+    <li><a class="dropdown-item" href="../../../../../../v2.2.0">v2.2.0</a></li>
+    <li><a class="dropdown-item" href="../../../../../../v2.3.0">v2.3.0</a></li>
+    <li><a class="dropdown-item" href="../../../../../../v2.4.9">v2.4.9</a></li>
+    <li><a class="dropdown-item" href="../../../../../../v2.5.2">v2.5.2</a></li>
+    <li><a class="dropdown-item" href="../../../../../../v2.6.2">v2.6.2</a></li>
+    <li><a class="dropdown-item" href="../../../../../../v2.7.4">v2.7.4</a></li>
     </ul>
+</div></li>
+      </ul>
   </div>
-  <div class="dropdown-menu" id="dropdown_ver" aria-labelledby="navbarDropdownMenuLink">
+  <div class="d-none d-lg-block">
+    <div class="td-search td-search--offline">
+  <div class="td-search__icon"></div>
+  <input
+    type="search"
+    class="td-search__input form-control"
+    placeholder="Search this site…"
+    aria-label="Search this site…"
+    autocomplete="off"
     
-      
-        <a class="dropdown-item" href="../../../../../../docs/manual/advanced/formats/">Latest version</a>
-    
-      
-        <a class="dropdown-item" href="../../../../../../v1.5.0/docs/manual/advanced/formats/">v1.5.0</a>
-    
-      
-        <a class="dropdown-item" href="../../../../../../v1.6.0/docs/manual/advanced/formats/">v1.6.0</a>
-    
-      
-        <a class="dropdown-item" href="../../../../../../v1.7.0/docs/manual/advanced/formats/">v1.7.0</a>
-    
-      
-        <a class="dropdown-item" href="../../../../../../v2.0.0/docs/manual/advanced/formats/">v2.0.0</a>
-    
-      
-        <a class="dropdown-item" href="../../../../../../v2.1.0/docs/manual/advanced/formats/">v2.1.0</a>
-    
-      
-        <a class="dropdown-item" href="../../../../../../v2.2.0/docs/manual/advanced/formats/">v2.2.0</a>
-    
+    data-offline-search-index-json-src="../../../../../offline-search-index.18c6994e942aa5633fb6d693a1642146.json"
+    data-offline-search-base-href="../../../../../"
+    data-offline-search-max-results="10"
+  >
+</div>
+
   </div>
-  <div class="navbar-nav d-none d-lg-block">
-
-
-
-<input
-  type="search"
-  class="form-control td-search-input"
-  placeholder="&#xf002; Search this site…"
-  aria-label="Search this site…"
-  autocomplete="off"
-  
-  data-offline-search-index-json-src="../../../../../offline-search-index.404a07827d0e47be6733c00732f365f6.json"
-  data-offline-search-base-href="../../../../../"
-  data-offline-search-max-results="10"
->
-
 </div>
 </nav>
-
     </header>
     <div class="container-fluid td-outer">
       <div class="td-main">
         <div class="row flex-xl-nowrap">
-          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
-          </div>
-          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-          </div>
-          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
             
 
 
@@ -183,7 +118,7 @@
 <div class="td-content">
 <div class="pageinfo pageinfo-primary d-print-none">
 <p>
-This the multi-page printable view of this section.
+This is the multi-page printable view of this section.
 <a href="#" onclick="print();return false;">Click here to print</a>.
 </p><p>
 <a href="../../../../../docs/manual/advanced/formats/">Return to the regular view of this page</a>.
@@ -393,22 +328,22 @@ Points, Cuboids, Tracks</p>
 </ul>
 <h2 id="cvat-for-images-export">CVAT for images export</h2>
 <p>Downloaded file: a ZIP file of the following structure:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">taskname.zip/
-├── images/
-<span style="color:#000;font-weight:bold">|</span>   ├── img1.png
-<span style="color:#000;font-weight:bold">|</span>   └── img2.jpg
-└── annotations.xml
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>taskname.zip/
+</span></span><span style="display:flex;"><span>├── images/
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">|</span>   ├── img1.png
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">|</span>   └── img2.jpg
+</span></span><span style="display:flex;"><span>└── annotations.xml
+</span></span></code></pre></div><ul>
 <li>tracks are split by frames</li>
 </ul>
 <h2 id="cvat-for-videos-export">CVAT for videos export</h2>
 <p>Downloaded file: a ZIP file of the following structure:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">taskname.zip/
-├── images/
-<span style="color:#000;font-weight:bold">|</span>   ├── frame_000000.png
-<span style="color:#000;font-weight:bold">|</span>   └── frame_000001.png
-└── annotations.xml
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>taskname.zip/
+</span></span><span style="display:flex;"><span>├── images/
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">|</span>   ├── frame_000000.png
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">|</span>   └── frame_000001.png
+</span></span><span style="display:flex;"><span>└── annotations.xml
+</span></span></code></pre></div><ul>
 <li>shapes are exported as single-frame tracks</li>
 </ul>
 <h2 id="cvat-loader">CVAT loader</h2>
@@ -460,22 +395,22 @@ is possible in Datumaro too, but Datumaro can offer dataset operations.</p>
 	<h1 id="labelmehttplabelmecsailmitedurelease30"><a href="http://labelme.csail.mit.edu/Release3.0">LabelMe</a></h1>
 <h2 id="labelme-export">LabelMe export</h2>
 <p>Downloaded file: a zip archive of the following structure:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">taskname.zip/
-├── img1.jpg
-└── img1.xml
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>taskname.zip/
+</span></span><span style="display:flex;"><span>├── img1.jpg
+</span></span><span style="display:flex;"><span>└── img1.xml
+</span></span></code></pre></div><ul>
 <li>supported annotations: Rectangles, Polygons (with attributes)</li>
 </ul>
 <h2 id="labelme-import">LabelMe import</h2>
 <p>Uploaded file: a zip archive of the following structure:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">taskname.zip/
-├── Masks/
-<span style="color:#000;font-weight:bold">|</span>   ├── img1_mask1.png
-<span style="color:#000;font-weight:bold">|</span>   └── img1_mask2.png
-├── img1.xml
-├── img2.xml
-└── img3.xml
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>taskname.zip/
+</span></span><span style="display:flex;"><span>├── Masks/
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">|</span>   ├── img1_mask1.png
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">|</span>   └── img1_mask2.png
+</span></span><span style="display:flex;"><span>├── img1.xml
+</span></span><span style="display:flex;"><span>├── img2.xml
+</span></span><span style="display:flex;"><span>└── img3.xml
+</span></span></code></pre></div><ul>
 <li>supported annotations: Rectangles, Polygons, Masks (as polygons)</li>
 </ul>
 
@@ -498,35 +433,34 @@ is possible in Datumaro too, but Datumaro can offer dataset operations.</p>
 	<h1 id="mot-sequencehttpsarxivorgpdf190604567pdf"><a href="https://arxiv.org/pdf/1906.04567.pdf">MOT sequence</a></h1>
 <h2 id="mot-export">MOT export</h2>
 <p>Downloaded file: a zip archive of the following structure:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">taskname.zip/
-├── img1/
-<span style="color:#000;font-weight:bold">|</span>   ├── image1.jpg
-<span style="color:#000;font-weight:bold">|</span>   └── image2.jpg
-└── gt/
-    ├── labels.txt
-    └── gt.txt
-
-<span style="color:#8f5902;font-style:italic"># labels.txt</span>
-cat
-dog
-person
-...
-
-<span style="color:#8f5902;font-style:italic"># gt.txt</span>
-<span style="color:#8f5902;font-style:italic"># frame_id, track_id, x, y, w, h, &#34;not ignored&#34;, class_id, visibility, &lt;skipped&gt;</span>
-1,1,1363,569,103,241,1,1,0.86014
-...
-
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>taskname.zip/
+</span></span><span style="display:flex;"><span>├── img1/
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">|</span>   ├── image1.jpg
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">|</span>   └── image2.jpg
+</span></span><span style="display:flex;"><span>└── gt/
+</span></span><span style="display:flex;"><span>    ├── labels.txt
+</span></span><span style="display:flex;"><span>    └── gt.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># labels.txt</span>
+</span></span><span style="display:flex;"><span>cat
+</span></span><span style="display:flex;"><span>dog
+</span></span><span style="display:flex;"><span>person
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># gt.txt</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># frame_id, track_id, x, y, w, h, &#34;not ignored&#34;, class_id, visibility, &lt;skipped&gt;</span>
+</span></span><span style="display:flex;"><span>1,1,1363,569,103,241,1,1,0.86014
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><ul>
 <li>supported annotations: Rectangle shapes and tracks</li>
 <li>supported attributes: <code>visibility</code> (number), <code>ignored</code> (checkbox)</li>
 </ul>
 <h2 id="mot-import">MOT import</h2>
 <p>Uploaded file: a zip archive of the structure above or:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">taskname.zip/
-├── labels.txt <span style="color:#8f5902;font-style:italic"># optional, mandatory for non-official labels</span>
-└── gt.txt
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>taskname.zip/
+</span></span><span style="display:flex;"><span>├── labels.txt <span style="color:#8f5902;font-style:italic"># optional, mandatory for non-official labels</span>
+</span></span><span style="display:flex;"><span>└── gt.txt
+</span></span></code></pre></div><ul>
 <li>supported annotations: Rectangle tracks</li>
 </ul>
 
@@ -549,22 +483,22 @@ person
 	<h1 id="mots-pnghttpswwwvisionrwth-aachendepagemots"><a href="https://www.vision.rwth-aachen.de/page/mots">MOTS PNG</a></h1>
 <h2 id="mots-png-export">MOTS PNG export</h2>
 <p>Downloaded file: a zip archive of the following structure:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">taskname.zip/
-└── &lt;any_subset_name&gt;/
-    <span style="color:#000;font-weight:bold">|</span>   images/
-    <span style="color:#000;font-weight:bold">|</span>   ├── image1.jpg
-    <span style="color:#000;font-weight:bold">|</span>   └── image2.jpg
-    └── instances/
-        ├── labels.txt
-        ├── image1.png
-        └── image2.png
-
-<span style="color:#8f5902;font-style:italic"># labels.txt</span>
-cat
-dog
-person
-...
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>taskname.zip/
+</span></span><span style="display:flex;"><span>└── &lt;any_subset_name&gt;/
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">|</span>   images/
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">|</span>   ├── image1.jpg
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">|</span>   └── image2.jpg
+</span></span><span style="display:flex;"><span>    └── instances/
+</span></span><span style="display:flex;"><span>        ├── labels.txt
+</span></span><span style="display:flex;"><span>        ├── image1.png
+</span></span><span style="display:flex;"><span>        └── image2.png
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># labels.txt</span>
+</span></span><span style="display:flex;"><span>cat
+</span></span><span style="display:flex;"><span>dog
+</span></span><span style="display:flex;"><span>person
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><ul>
 <li>supported annotations: Rectangle and Polygon tracks</li>
 </ul>
 <h2 id="mots-png-import">MOTS PNG import</h2>
@@ -635,8 +569,8 @@ keypoint lists (without the <code>visibility</code> COCO flag).</p>
 </li>
 <li>
 <p>Create a CVAT task with the following labels:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">person bicycle car motorcycle airplane bus train truck boat <span style="color:#4e9a06">&#34;traffic light&#34;</span> <span style="color:#4e9a06">&#34;fire hydrant&#34;</span> <span style="color:#4e9a06">&#34;stop sign&#34;</span> <span style="color:#4e9a06">&#34;parking meter&#34;</span> bench bird cat dog horse sheep cow elephant bear zebra giraffe backpack umbrella handbag tie suitcase frisbee skis snowboard <span style="color:#4e9a06">&#34;sports ball&#34;</span> kite <span style="color:#4e9a06">&#34;baseball bat&#34;</span> <span style="color:#4e9a06">&#34;baseball glove&#34;</span> skateboard surfboard <span style="color:#4e9a06">&#34;tennis racket&#34;</span> bottle <span style="color:#4e9a06">&#34;wine glass&#34;</span> cup fork knife spoon bowl banana apple sandwich orange broccoli carrot <span style="color:#4e9a06">&#34;hot dog&#34;</span> pizza donut cake chair couch <span style="color:#4e9a06">&#34;potted plant&#34;</span> bed <span style="color:#4e9a06">&#34;dining table&#34;</span> toilet tv laptop mouse remote keyboard <span style="color:#4e9a06">&#34;cell phone&#34;</span> microwave oven toaster sink refrigerator book clock vase scissors <span style="color:#4e9a06">&#34;teddy bear&#34;</span> <span style="color:#4e9a06">&#34;hair drier&#34;</span> toothbrush
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>person bicycle car motorcycle airplane bus train truck boat <span style="color:#4e9a06">&#34;traffic light&#34;</span> <span style="color:#4e9a06">&#34;fire hydrant&#34;</span> <span style="color:#4e9a06">&#34;stop sign&#34;</span> <span style="color:#4e9a06">&#34;parking meter&#34;</span> bench bird cat dog horse sheep cow elephant bear zebra giraffe backpack umbrella handbag tie suitcase frisbee skis snowboard <span style="color:#4e9a06">&#34;sports ball&#34;</span> kite <span style="color:#4e9a06">&#34;baseball bat&#34;</span> <span style="color:#4e9a06">&#34;baseball glove&#34;</span> skateboard surfboard <span style="color:#4e9a06">&#34;tennis racket&#34;</span> bottle <span style="color:#4e9a06">&#34;wine glass&#34;</span> cup fork knife spoon bowl banana apple sandwich orange broccoli carrot <span style="color:#4e9a06">&#34;hot dog&#34;</span> pizza donut cake chair couch <span style="color:#4e9a06">&#34;potted plant&#34;</span> bed <span style="color:#4e9a06">&#34;dining table&#34;</span> toilet tv laptop mouse remote keyboard <span style="color:#4e9a06">&#34;cell phone&#34;</span> microwave oven toaster sink refrigerator book clock vase scissors <span style="color:#4e9a06">&#34;teddy bear&#34;</span> <span style="color:#4e9a06">&#34;hair drier&#34;</span> toothbrush
+</span></span></code></pre></div></li>
 <li>
 <p>Select <code>val2017.zip</code> as data
 (See <a href="../../../../../docs/manual/basics/creating_an_annotation_task/">Creating an annotation task</a>
@@ -693,33 +627,33 @@ annotation file. It can take some time.</p>
 </ul>
 <h2 id="pascal-voc-export">Pascal VOC export</h2>
 <p>Downloaded file: a zip archive of the following structure:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">taskname.zip/
-├── JPEGImages/
-│   ├── &lt;image_name1&gt;.jpg
-│   ├── &lt;image_name2&gt;.jpg
-│   └── &lt;image_nameN&gt;.jpg
-├── Annotations/
-│   ├── &lt;image_name1&gt;.xml
-│   ├── &lt;image_name2&gt;.xml
-│   └── &lt;image_nameN&gt;.xml
-├── ImageSets/
-│   └── Main/
-│       └── default.txt
-└── labelmap.txt
-
-<span style="color:#8f5902;font-style:italic"># labelmap.txt</span>
-<span style="color:#8f5902;font-style:italic"># label : color_rgb : &#39;body&#39; parts : actions</span>
-background:::
-aeroplane:::
-bicycle:::
-bird:::
-</code></pre></div><h2 id="pascal-voc-import">Pascal VOC import</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>taskname.zip/
+</span></span><span style="display:flex;"><span>├── JPEGImages/
+</span></span><span style="display:flex;"><span>│   ├── &lt;image_name1&gt;.jpg
+</span></span><span style="display:flex;"><span>│   ├── &lt;image_name2&gt;.jpg
+</span></span><span style="display:flex;"><span>│   └── &lt;image_nameN&gt;.jpg
+</span></span><span style="display:flex;"><span>├── Annotations/
+</span></span><span style="display:flex;"><span>│   ├── &lt;image_name1&gt;.xml
+</span></span><span style="display:flex;"><span>│   ├── &lt;image_name2&gt;.xml
+</span></span><span style="display:flex;"><span>│   └── &lt;image_nameN&gt;.xml
+</span></span><span style="display:flex;"><span>├── ImageSets/
+</span></span><span style="display:flex;"><span>│   └── Main/
+</span></span><span style="display:flex;"><span>│       └── default.txt
+</span></span><span style="display:flex;"><span>└── labelmap.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># labelmap.txt</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># label : color_rgb : &#39;body&#39; parts : actions</span>
+</span></span><span style="display:flex;"><span>background:::
+</span></span><span style="display:flex;"><span>aeroplane:::
+</span></span><span style="display:flex;"><span>bicycle:::
+</span></span><span style="display:flex;"><span>bird:::
+</span></span></code></pre></div><h2 id="pascal-voc-import">Pascal VOC import</h2>
 <p>Uploaded file: a zip archive of the structure declared above or the following:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">taskname.zip/
-├── &lt;image_name1&gt;.xml
-├── &lt;image_name2&gt;.xml
-└── &lt;image_nameN&gt;.xml
-</code></pre></div><p>It must be possible for CVAT to match the frame name and file name
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>taskname.zip/
+</span></span><span style="display:flex;"><span>├── &lt;image_name1&gt;.xml
+</span></span><span style="display:flex;"><span>├── &lt;image_name2&gt;.xml
+</span></span><span style="display:flex;"><span>└── &lt;image_nameN&gt;.xml
+</span></span></code></pre></div><p>It must be possible for CVAT to match the frame name and file name
 from annotation <code>.xml</code> file (the <code>filename</code> tag, e. g.
 <code>&lt;filename&gt;2008_004457.jpg&lt;/filename&gt;</code> ).</p>
 <p>There are 2 options:</p>
@@ -735,28 +669,28 @@ or <code>frame_000000.jpg</code>. It should be used when task was created from v
 </ol>
 <h2 id="segmentation-mask-export">Segmentation mask export</h2>
 <p>Downloaded file: a zip archive of the following structure:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">taskname.zip/
-├── labelmap.txt <span style="color:#8f5902;font-style:italic"># optional, required for non-VOC labels</span>
-├── ImageSets/
-│   └── Segmentation/
-│       └── default.txt <span style="color:#8f5902;font-style:italic"># list of image names without extension</span>
-├── SegmentationClass/ <span style="color:#8f5902;font-style:italic"># merged class masks</span>
-│   ├── image1.png
-│   └── image2.png
-└── SegmentationObject/ <span style="color:#8f5902;font-style:italic"># merged instance masks</span>
-    ├── image1.png
-    └── image2.png
-
-<span style="color:#8f5902;font-style:italic"># labelmap.txt</span>
-<span style="color:#8f5902;font-style:italic"># label : color (RGB) : &#39;body&#39; parts : actions</span>
-background:0,128,0::
-aeroplane:10,10,128::
-bicycle:10,128,0::
-bird:0,108,128::
-boat:108,0,100::
-bottle:18,0,8::
-bus:12,28,0::
-</code></pre></div><p>Mask is a <code>png</code> image with 1 or 3 channels where each pixel
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>taskname.zip/
+</span></span><span style="display:flex;"><span>├── labelmap.txt <span style="color:#8f5902;font-style:italic"># optional, required for non-VOC labels</span>
+</span></span><span style="display:flex;"><span>├── ImageSets/
+</span></span><span style="display:flex;"><span>│   └── Segmentation/
+</span></span><span style="display:flex;"><span>│       └── default.txt <span style="color:#8f5902;font-style:italic"># list of image names without extension</span>
+</span></span><span style="display:flex;"><span>├── SegmentationClass/ <span style="color:#8f5902;font-style:italic"># merged class masks</span>
+</span></span><span style="display:flex;"><span>│   ├── image1.png
+</span></span><span style="display:flex;"><span>│   └── image2.png
+</span></span><span style="display:flex;"><span>└── SegmentationObject/ <span style="color:#8f5902;font-style:italic"># merged instance masks</span>
+</span></span><span style="display:flex;"><span>    ├── image1.png
+</span></span><span style="display:flex;"><span>    └── image2.png
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># labelmap.txt</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># label : color (RGB) : &#39;body&#39; parts : actions</span>
+</span></span><span style="display:flex;"><span>background:0,128,0::
+</span></span><span style="display:flex;"><span>aeroplane:10,10,128::
+</span></span><span style="display:flex;"><span>bicycle:10,128,0::
+</span></span><span style="display:flex;"><span>bird:0,108,128::
+</span></span><span style="display:flex;"><span>boat:108,0,100::
+</span></span><span style="display:flex;"><span>bottle:18,0,8::
+</span></span><span style="display:flex;"><span>bus:12,28,0::
+</span></span></code></pre></div><p>Mask is a <code>png</code> image with 1 or 3 channels where each pixel
 has own color which corresponds to a label.
 Colors are generated following to Pascal VOC <a href="http://host.robots.ox.ac.uk/pascal/VOC/voc2012/htmldoc/devkit_doc.html#sec:voclabelcolormap">algorithm</a>.
 <code>(0, 0, 0)</code> is used for background by default.</p>
@@ -765,25 +699,25 @@ Colors are generated following to Pascal VOC <a href="http://host.robots.ox.ac.u
 </ul>
 <h2 id="segmentation-mask-import">Segmentation mask import</h2>
 <p>Uploaded file: a zip archive of the following structure:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  taskname.zip/
-  ├── labelmap.txt <span style="color:#8f5902;font-style:italic"># optional, required for non-VOC labels</span>
-  ├── ImageSets/
-  │   └── Segmentation/
-  │       └── &lt;any_subset_name&gt;.txt
-  ├── SegmentationClass/
-  │   ├── image1.png
-  │   └── image2.png
-  └── SegmentationObject/
-      ├── image1.png
-      └── image2.png
-</code></pre></div><p>It is also possible to import grayscale (1-channel) PNG masks.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  taskname.zip/
+</span></span><span style="display:flex;"><span>  ├── labelmap.txt <span style="color:#8f5902;font-style:italic"># optional, required for non-VOC labels</span>
+</span></span><span style="display:flex;"><span>  ├── ImageSets/
+</span></span><span style="display:flex;"><span>  │   └── Segmentation/
+</span></span><span style="display:flex;"><span>  │       └── &lt;any_subset_name&gt;.txt
+</span></span><span style="display:flex;"><span>  ├── SegmentationClass/
+</span></span><span style="display:flex;"><span>  │   ├── image1.png
+</span></span><span style="display:flex;"><span>  │   └── image2.png
+</span></span><span style="display:flex;"><span>  └── SegmentationObject/
+</span></span><span style="display:flex;"><span>      ├── image1.png
+</span></span><span style="display:flex;"><span>      └── image2.png
+</span></span></code></pre></div><p>It is also possible to import grayscale (1-channel) PNG masks.
 For grayscale masks provide a list of labels with the number of lines equal
 to the maximum color index on images. The lines must be in the right order
 so that line index is equal to the color index. Lines can have arbitrary,
 but different, colors. If there are gaps in the used color
 indices in the annotations, they must be filled with arbitrary dummy labels.
 Example:</p>
-<pre><code>q:0,128,0:: # color index 0
+<pre tabindex="0"><code>q:0,128,0:: # color index 0
 aeroplane:10,10,128:: # color index 1
 _dummy2:2,2,2:: # filler for color index 2
 _dummy3:3,3,3:: # filler for color index 3
@@ -804,9 +738,9 @@ the last label:12,28,0:: # color index 200
 </li>
 <li>
 <p>Create a CVAT task with the following labels:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">aeroplane bicycle bird boat bottle bus car cat chair cow diningtable
-dog horse motorbike person pottedplant sheep sofa train tvmonitor
-</code></pre></div><p>You can add <code>~checkbox=difficult:false ~checkbox=truncated:false</code>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aeroplane bicycle bird boat bottle bus car cat chair cow diningtable
+</span></span><span style="display:flex;"><span>dog horse motorbike person pottedplant sheep sofa train tvmonitor
+</span></span></code></pre></div><p>You can add <code>~checkbox=difficult:false ~checkbox=truncated:false</code>
 attributes for each label if you want to use them.</p>
 <p>Select interesting image files
 (See <a href="../../../../../docs/manual/basics/creating_an_annotation_task/">Creating an annotation task</a> guide for details)</p>
@@ -844,39 +778,39 @@ It may take some time.</p>
 </ul>
 <h2 id="yolo-export">YOLO export</h2>
 <p>Downloaded file: a zip archive with following structure:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">archive.zip/
-├── obj.data
-├── obj.names
-├── obj_&lt;subset&gt;_data
-│   ├── image1.txt
-│   └── image2.txt
-└── train.txt <span style="color:#8f5902;font-style:italic"># list of subset image paths</span>
-
-<span style="color:#8f5902;font-style:italic"># the only valid subsets are: train, valid</span>
-<span style="color:#8f5902;font-style:italic"># train.txt and valid.txt:</span>
-obj_&lt;subset&gt;_data/image1.jpg
-obj_&lt;subset&gt;_data/image2.jpg
-
-<span style="color:#8f5902;font-style:italic"># obj.data:</span>
-<span style="color:#000">classes</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">3</span> <span style="color:#8f5902;font-style:italic"># optional</span>
-<span style="color:#000">names</span> <span style="color:#ce5c00;font-weight:bold">=</span> obj.names
-<span style="color:#000">train</span> <span style="color:#ce5c00;font-weight:bold">=</span> train.txt
-<span style="color:#000">valid</span> <span style="color:#ce5c00;font-weight:bold">=</span> valid.txt <span style="color:#8f5902;font-style:italic"># optional</span>
-<span style="color:#000">backup</span> <span style="color:#ce5c00;font-weight:bold">=</span> backup/ <span style="color:#8f5902;font-style:italic"># optional</span>
-
-<span style="color:#8f5902;font-style:italic"># obj.names:</span>
-cat
-dog
-airplane
-
-<span style="color:#8f5902;font-style:italic"># image_name.txt:</span>
-<span style="color:#8f5902;font-style:italic"># label_id - id from obj.names</span>
-<span style="color:#8f5902;font-style:italic"># cx, cy - relative coordinates of the bbox center</span>
-<span style="color:#8f5902;font-style:italic"># rw, rh - relative size of the bbox</span>
-<span style="color:#8f5902;font-style:italic"># label_id cx cy rw rh</span>
-<span style="color:#0000cf;font-weight:bold">1</span> 0.3 0.8 0.1 0.3
-<span style="color:#0000cf;font-weight:bold">2</span> 0.7 0.2 0.3 0.1
-</code></pre></div><p>Each annotation <code>*.txt</code> file has a name that corresponds to the name of
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>archive.zip/
+</span></span><span style="display:flex;"><span>├── obj.data
+</span></span><span style="display:flex;"><span>├── obj.names
+</span></span><span style="display:flex;"><span>├── obj_&lt;subset&gt;_data
+</span></span><span style="display:flex;"><span>│   ├── image1.txt
+</span></span><span style="display:flex;"><span>│   └── image2.txt
+</span></span><span style="display:flex;"><span>└── train.txt <span style="color:#8f5902;font-style:italic"># list of subset image paths</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># the only valid subsets are: train, valid</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># train.txt and valid.txt:</span>
+</span></span><span style="display:flex;"><span>obj_&lt;subset&gt;_data/image1.jpg
+</span></span><span style="display:flex;"><span>obj_&lt;subset&gt;_data/image2.jpg
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># obj.data:</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">classes</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">3</span> <span style="color:#8f5902;font-style:italic"># optional</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">names</span> <span style="color:#ce5c00;font-weight:bold">=</span> obj.names
+</span></span><span style="display:flex;"><span><span style="color:#000">train</span> <span style="color:#ce5c00;font-weight:bold">=</span> train.txt
+</span></span><span style="display:flex;"><span><span style="color:#000">valid</span> <span style="color:#ce5c00;font-weight:bold">=</span> valid.txt <span style="color:#8f5902;font-style:italic"># optional</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">backup</span> <span style="color:#ce5c00;font-weight:bold">=</span> backup/ <span style="color:#8f5902;font-style:italic"># optional</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># obj.names:</span>
+</span></span><span style="display:flex;"><span>cat
+</span></span><span style="display:flex;"><span>dog
+</span></span><span style="display:flex;"><span>airplane
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># image_name.txt:</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># label_id - id from obj.names</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># cx, cy - relative coordinates of the bbox center</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># rw, rh - relative size of the bbox</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># label_id cx cy rw rh</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">1</span> 0.3 0.8 0.1 0.3
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2</span> 0.7 0.2 0.3 0.1
+</span></span></code></pre></div><p>Each annotation <code>*.txt</code> file has a name that corresponds to the name of
 the image file (e. g. <code>frame_000001.txt</code> is the annotation
 for the <code>frame_000001.jpg</code> image).
 The <code>*.txt</code> file structure: each line describes label and bounding box
@@ -907,44 +841,44 @@ and prepare the YOLO formatted annotation files.</p>
 <p>Zip train images</p>
 </li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">zip images.zip -j -@ &lt; train.txt
-</code></pre></div><ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>zip images.zip -j -@ &lt; train.txt
+</span></span></code></pre></div><ol>
 <li>
 <p>Create a CVAT task with the following labels:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">aeroplane bicycle bird boat bottle bus car cat chair cow diningtable dog
-horse motorbike person pottedplant sheep sofa train tvmonitor
-</code></pre></div><p>Select images. zip as data. Most likely you should use <code>share</code>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aeroplane bicycle bird boat bottle bus car cat chair cow diningtable dog
+</span></span><span style="display:flex;"><span>horse motorbike person pottedplant sheep sofa train tvmonitor
+</span></span></code></pre></div><p>Select images. zip as data. Most likely you should use <code>share</code>
 functionality because size of images. zip is more than 500Mb.
 See <a href="../../../../../docs/manual/basics/creating_an_annotation_task/">Creating an annotation task</a>
 guide for details.</p>
 </li>
 <li>
 <p>Create <code>obj.names</code> with the following content:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">aeroplane
-bicycle
-bird
-boat
-bottle
-bus
-car
-cat
-chair
-cow
-diningtable
-dog
-horse
-motorbike
-person
-pottedplant
-sheep
-sofa
-train
-tvmonitor
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aeroplane
+</span></span><span style="display:flex;"><span>bicycle
+</span></span><span style="display:flex;"><span>bird
+</span></span><span style="display:flex;"><span>boat
+</span></span><span style="display:flex;"><span>bottle
+</span></span><span style="display:flex;"><span>bus
+</span></span><span style="display:flex;"><span>car
+</span></span><span style="display:flex;"><span>cat
+</span></span><span style="display:flex;"><span>chair
+</span></span><span style="display:flex;"><span>cow
+</span></span><span style="display:flex;"><span>diningtable
+</span></span><span style="display:flex;"><span>dog
+</span></span><span style="display:flex;"><span>horse
+</span></span><span style="display:flex;"><span>motorbike
+</span></span><span style="display:flex;"><span>person
+</span></span><span style="display:flex;"><span>pottedplant
+</span></span><span style="display:flex;"><span>sheep
+</span></span><span style="display:flex;"><span>sofa
+</span></span><span style="display:flex;"><span>train
+</span></span><span style="display:flex;"><span>tvmonitor
+</span></span></code></pre></div></li>
 <li>
 <p>Zip all label files together (we need to add only label files that correspond to the train subset)</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat train.txt <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">while</span> <span style="color:#204a87">read</span> p<span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">do</span> <span style="color:#204a87">echo</span> <span style="color:#4e9a06">${</span><span style="color:#000">p</span><span style="color:#000;font-weight:bold">%/*/*</span><span style="color:#4e9a06">}</span>/labels/<span style="color:#4e9a06">${${</span><span style="color:#000">p</span><span style="color:#000;font-weight:bold">##*/</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">%%.*</span><span style="color:#4e9a06">}</span>.txt<span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">done</span> <span style="color:#000;font-weight:bold">|</span> zip labels.zip -j -@ obj.names
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat train.txt <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">while</span> <span style="color:#204a87">read</span> p<span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">do</span> <span style="color:#204a87">echo</span> <span style="color:#4e9a06">${</span><span style="color:#000">p</span><span style="color:#000;font-weight:bold">%/*/*</span><span style="color:#4e9a06">}</span>/labels/<span style="color:#4e9a06">${${</span><span style="color:#000">p</span><span style="color:#000;font-weight:bold">##*/</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">%%.*</span><span style="color:#4e9a06">}</span>.txt<span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">done</span> <span style="color:#000;font-weight:bold">|</span> zip labels.zip -j -@ obj.names
+</span></span></code></pre></div></li>
 <li>
 <p>Click <code>Upload annotation</code> button, choose <code>YOLO 1.1</code> and select the zip</p>
 <p>file with labels from the previous step.</p>
@@ -973,36 +907,36 @@ format that used in
 <a href="https://github.com/tensorflow/models/tree/master/research/object_detection">TF object detection</a>
 with minimal modifications.</p>
 <p>Used feature description:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">image_feature_description</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#4e9a06">&#39;image/filename&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">io</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">FixedLenFeature</span><span style="color:#000;font-weight:bold">([],</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">string</span><span style="color:#000;font-weight:bold">),</span>
-    <span style="color:#4e9a06">&#39;image/source_id&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">io</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">FixedLenFeature</span><span style="color:#000;font-weight:bold">([],</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">string</span><span style="color:#000;font-weight:bold">),</span>
-    <span style="color:#4e9a06">&#39;image/height&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">io</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">FixedLenFeature</span><span style="color:#000;font-weight:bold">([],</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">int64</span><span style="color:#000;font-weight:bold">),</span>
-    <span style="color:#4e9a06">&#39;image/width&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">io</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">FixedLenFeature</span><span style="color:#000;font-weight:bold">([],</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">int64</span><span style="color:#000;font-weight:bold">),</span>
-    <span style="color:#8f5902;font-style:italic"># Object boxes and classes.</span>
-    <span style="color:#4e9a06">&#39;image/object/bbox/xmin&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">io</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">VarLenFeature</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">float32</span><span style="color:#000;font-weight:bold">),</span>
-    <span style="color:#4e9a06">&#39;image/object/bbox/xmax&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">io</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">VarLenFeature</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">float32</span><span style="color:#000;font-weight:bold">),</span>
-    <span style="color:#4e9a06">&#39;image/object/bbox/ymin&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">io</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">VarLenFeature</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">float32</span><span style="color:#000;font-weight:bold">),</span>
-    <span style="color:#4e9a06">&#39;image/object/bbox/ymax&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">io</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">VarLenFeature</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">float32</span><span style="color:#000;font-weight:bold">),</span>
-    <span style="color:#4e9a06">&#39;image/object/class/label&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">io</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">VarLenFeature</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">int64</span><span style="color:#000;font-weight:bold">),</span>
-    <span style="color:#4e9a06">&#39;image/object/class/text&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">io</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">VarLenFeature</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">string</span><span style="color:#000;font-weight:bold">),</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><h2 id="tfrecord-export">TFRecord export</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#000">image_feature_description</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#39;image/filename&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">io</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">FixedLenFeature</span><span style="color:#000;font-weight:bold">([],</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">string</span><span style="color:#000;font-weight:bold">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#39;image/source_id&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">io</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">FixedLenFeature</span><span style="color:#000;font-weight:bold">([],</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">string</span><span style="color:#000;font-weight:bold">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#39;image/height&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">io</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">FixedLenFeature</span><span style="color:#000;font-weight:bold">([],</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">int64</span><span style="color:#000;font-weight:bold">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#39;image/width&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">io</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">FixedLenFeature</span><span style="color:#000;font-weight:bold">([],</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">int64</span><span style="color:#000;font-weight:bold">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic"># Object boxes and classes.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#39;image/object/bbox/xmin&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">io</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">VarLenFeature</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">float32</span><span style="color:#000;font-weight:bold">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#39;image/object/bbox/xmax&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">io</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">VarLenFeature</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">float32</span><span style="color:#000;font-weight:bold">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#39;image/object/bbox/ymin&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">io</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">VarLenFeature</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">float32</span><span style="color:#000;font-weight:bold">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#39;image/object/bbox/ymax&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">io</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">VarLenFeature</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">float32</span><span style="color:#000;font-weight:bold">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#39;image/object/class/label&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">io</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">VarLenFeature</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">int64</span><span style="color:#000;font-weight:bold">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#39;image/object/class/text&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">io</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">VarLenFeature</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">tf</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">string</span><span style="color:#000;font-weight:bold">),</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h2 id="tfrecord-export">TFRecord export</h2>
 <p>Downloaded file: a zip archive with following structure:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">taskname.zip/
-├── default.tfrecord
-└── label_map.pbtxt
-
-<span style="color:#8f5902;font-style:italic"># label_map.pbtxt</span>
-item <span style="color:#ce5c00;font-weight:bold">{</span>
-	id: <span style="color:#0000cf;font-weight:bold">1</span>
-	name: <span style="color:#4e9a06">&#39;label_0&#39;</span>
-<span style="color:#ce5c00;font-weight:bold">}</span>
-item <span style="color:#ce5c00;font-weight:bold">{</span>
-	id: <span style="color:#0000cf;font-weight:bold">2</span>
-	name: <span style="color:#4e9a06">&#39;label_1&#39;</span>
-<span style="color:#ce5c00;font-weight:bold">}</span>
-...
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>taskname.zip/
+</span></span><span style="display:flex;"><span>├── default.tfrecord
+</span></span><span style="display:flex;"><span>└── label_map.pbtxt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># label_map.pbtxt</span>
+</span></span><span style="display:flex;"><span>item <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>	id: <span style="color:#0000cf;font-weight:bold">1</span>
+</span></span><span style="display:flex;"><span>	name: <span style="color:#4e9a06">&#39;label_0&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>item <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>	id: <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span>	name: <span style="color:#4e9a06">&#39;label_1&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><ul>
 <li>supported annotations: Rectangles, Polygons (as masks, manually over <a href="https://github.com/openvinotoolkit/datumaro/blob/develop/docs/user_manual.md">Datumaro</a>)</li>
 </ul>
 <p>How to export masks:</p>
@@ -1010,125 +944,125 @@ item <span style="color:#ce5c00;font-weight:bold">{</span>
 <li>Export annotations in <code>Datumaro</code> format</li>
 <li>Apply <code>polygons_to_masks</code> and <code>boxes_to_masks</code> transforms</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">datum transform -t polygons_to_masks -p path/to/proj -o ptm
-datum transform -t boxes_to_masks -p ptm -o btm
-</code></pre></div><ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>datum transform -t polygons_to_masks -p path/to/proj -o ptm
+</span></span><span style="display:flex;"><span>datum transform -t boxes_to_masks -p ptm -o btm
+</span></span></code></pre></div><ol>
 <li>Export in the <code>TF Detection API</code> format</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">datum <span style="color:#204a87">export</span> -f tf_detection_api -p btm <span style="color:#ce5c00;font-weight:bold">[</span>-- --save-images<span style="color:#ce5c00;font-weight:bold">]</span>
-</code></pre></div><h2 id="tfrecord-import">TFRecord import</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>datum <span style="color:#204a87">export</span> -f tf_detection_api -p btm <span style="color:#ce5c00;font-weight:bold">[</span>-- --save-images<span style="color:#ce5c00;font-weight:bold">]</span>
+</span></span></code></pre></div><h2 id="tfrecord-import">TFRecord import</h2>
 <p>Uploaded file: a zip archive of following structure:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">taskname.zip/
-└── &lt;any name&gt;.tfrecord
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>taskname.zip/
+</span></span><span style="display:flex;"><span>└── &lt;any name&gt;.tfrecord
+</span></span></code></pre></div><ul>
 <li>supported annotations: Rectangles</li>
 </ul>
 <h2 id="how-to-create-a-task-from-tfrecord-dataset-from-voc2007-for-example">How to create a task from TFRecord dataset (from VOC2007 for example)</h2>
 <ol>
 <li>Create <code>label_map.pbtxt</code> file with the following content:</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span>
-    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;aeroplane&#39;</span>
-<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span>
-    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;bicycle&#39;</span>
-<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span>
-    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;bird&#39;</span>
-<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span>
-    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;boat&#39;</span>
-<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span>
-    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;bottle&#39;</span>
-<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">6</span>
-    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;bus&#39;</span>
-<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">7</span>
-    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;car&#39;</span>
-<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">8</span>
-    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;cat&#39;</span>
-<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">9</span>
-    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;chair&#39;</span>
-<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span>
-    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;cow&#39;</span>
-<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">11</span>
-    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;diningtable&#39;</span>
-<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">12</span>
-    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;dog&#39;</span>
-<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13</span>
-    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;horse&#39;</span>
-<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">14</span>
-    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;motorbike&#39;</span>
-<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">15</span>
-    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;person&#39;</span>
-<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">16</span>
-    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;pottedplant&#39;</span>
-<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">17</span>
-    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;sheep&#39;</span>
-<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">18</span>
-    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;sofa&#39;</span>
-<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">19</span>
-    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;train&#39;</span>
-<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">20</span>
-    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;tvmonitor&#39;</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;aeroplane&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;bicycle&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;bird&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;boat&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;bottle&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">6</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;bus&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">7</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;car&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">8</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;cat&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">9</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;chair&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;cow&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">11</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;diningtable&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">12</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;dog&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;horse&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">14</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;motorbike&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">15</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;person&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">16</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;pottedplant&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">17</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;sheep&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">18</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;sofa&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">19</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;train&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">item</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">20</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;tvmonitor&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><ol>
 <li>Use <a href="https://github.com/tensorflow/models/blob/master/research/object_detection/dataset_tools/create_pascal_tf_record.py">create_pascal_tf_record.py</a></li>
 </ol>
 <p>to convert VOC2007 dataset to TFRecord format.
 As example:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python create_pascal_tf_record.py --data_dir &lt;path to VOCdevkit&gt; --set train --year VOC2007 --output_path pascal.tfrecord --label_map_path label_map.pbtxt
-</code></pre></div><ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python create_pascal_tf_record.py --data_dir &lt;path to VOCdevkit&gt; --set train --year VOC2007 --output_path pascal.tfrecord --label_map_path label_map.pbtxt
+</span></span></code></pre></div><ol>
 <li>
 <p>Zip train images</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat &lt;path to VOCdevkit&gt;/VOC2007/ImageSets/Main/train.txt <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">while</span> <span style="color:#204a87">read</span> p<span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">do</span> <span style="color:#204a87">echo</span> &lt;path to VOCdevkit&gt;/VOC2007/JPEGImages/<span style="color:#4e9a06">${</span><span style="color:#000">p</span><span style="color:#4e9a06">}</span>.jpg  <span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">done</span> <span style="color:#000;font-weight:bold">|</span> zip images.zip -j -@
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat &lt;path to VOCdevkit&gt;/VOC2007/ImageSets/Main/train.txt <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">while</span> <span style="color:#204a87">read</span> p<span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">do</span> <span style="color:#204a87">echo</span> &lt;path to VOCdevkit&gt;/VOC2007/JPEGImages/<span style="color:#4e9a06">${</span><span style="color:#000">p</span><span style="color:#4e9a06">}</span>.jpg  <span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">done</span> <span style="color:#000;font-weight:bold">|</span> zip images.zip -j -@
+</span></span></code></pre></div></li>
 <li>
 <p>Create a CVAT task with the following labels:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">aeroplane bicycle bird boat bottle bus car cat chair cow diningtable dog horse motorbike person pottedplant sheep sofa train tvmonitor
-</code></pre></div><p>Select images. zip as data.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aeroplane bicycle bird boat bottle bus car cat chair cow diningtable dog horse motorbike person pottedplant sheep sofa train tvmonitor
+</span></span></code></pre></div><p>Select images. zip as data.
 See <a href="../../../../../docs/manual/basics/creating_an_annotation_task/">Creating an annotation task</a>
 guide for details.</p>
 </li>
 <li>
 <p>Zip <code>pascal.tfrecord</code> and <code>label_map.pbtxt</code> files together</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">zip anno.zip -j &lt;path to pascal.tfrecord&gt; &lt;path to label_map.pbtxt&gt;
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>zip anno.zip -j &lt;path to pascal.tfrecord&gt; &lt;path to label_map.pbtxt&gt;
+</span></span></code></pre></div></li>
 <li>
 <p>Click <code>Upload annotation</code> button, choose <code>TFRecord 1.0</code> and select the zip file</p>
 <p>with labels from the previous step. It may take some time.</p>
@@ -1154,22 +1088,21 @@ guide for details.</p>
 	<h1 id="imagenethttpwwwimage-netorg"><a href="http://www.image-net.org">ImageNet</a></h1>
 <h2 id="imagenet-export">ImageNet export</h2>
 <p>Downloaded file: a zip archive of the following structure:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># if we save images:</span>
-taskname.zip/
-├── label1/
-<span style="color:#000;font-weight:bold">|</span>   ├── label1_image1.jpg
-<span style="color:#000;font-weight:bold">|</span>   └── label1_image2.jpg
-└── label2/
-    ├── label2_image1.jpg
-    ├── label2_image3.jpg
-    └── label2_image4.jpg
-
-<span style="color:#8f5902;font-style:italic"># if we keep only annotation:</span>
-taskname.zip/
-├── &lt;any_subset_name&gt;.txt
-└── synsets.txt
-
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># if we save images:</span>
+</span></span><span style="display:flex;"><span>taskname.zip/
+</span></span><span style="display:flex;"><span>├── label1/
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">|</span>   ├── label1_image1.jpg
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">|</span>   └── label1_image2.jpg
+</span></span><span style="display:flex;"><span>└── label2/
+</span></span><span style="display:flex;"><span>    ├── label2_image1.jpg
+</span></span><span style="display:flex;"><span>    ├── label2_image3.jpg
+</span></span><span style="display:flex;"><span>    └── label2_image4.jpg
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># if we keep only annotation:</span>
+</span></span><span style="display:flex;"><span>taskname.zip/
+</span></span><span style="display:flex;"><span>├── &lt;any_subset_name&gt;.txt
+</span></span><span style="display:flex;"><span>└── synsets.txt
+</span></span></code></pre></div><ul>
 <li>supported annotations: Labels</li>
 </ul>
 <h2 id="imagenet-import">ImageNet import</h2>
@@ -1197,17 +1130,17 @@ taskname.zip/
 	<h1 id="wider-facehttpshuoyang1213mewiderface"><a href="http://shuoyang1213.me/WIDERFACE/">WIDER Face</a></h1>
 <h2 id="wider-face-export">WIDER Face export</h2>
 <p>Downloaded file: a zip archive of the following structure:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">taskname.zip/
-├── labels.txt <span style="color:#8f5902;font-style:italic"># optional</span>
-├── wider_face_split/
-│   └── wider_face_&lt;any_subset_name&gt;_bbx_gt.txt
-└── WIDER_&lt;any_subset_name&gt;/
-    └── images/
-        ├── 0--label0/
-        │   └── 0_label0_image1.jpg
-        └── 1--label1/
-            └── 1_label1_image2.jpg
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>taskname.zip/
+</span></span><span style="display:flex;"><span>├── labels.txt <span style="color:#8f5902;font-style:italic"># optional</span>
+</span></span><span style="display:flex;"><span>├── wider_face_split/
+</span></span><span style="display:flex;"><span>│   └── wider_face_&lt;any_subset_name&gt;_bbx_gt.txt
+</span></span><span style="display:flex;"><span>└── WIDER_&lt;any_subset_name&gt;/
+</span></span><span style="display:flex;"><span>    └── images/
+</span></span><span style="display:flex;"><span>        ├── 0--label0/
+</span></span><span style="display:flex;"><span>        │   └── 0_label0_image1.jpg
+</span></span><span style="display:flex;"><span>        └── 1--label1/
+</span></span><span style="display:flex;"><span>            └── 1_label1_image2.jpg
+</span></span></code></pre></div><ul>
 <li>supported annotations: Rectangles (with attributes), Labels</li>
 <li>supported attributes:
 <ul>
@@ -1246,24 +1179,24 @@ taskname.zip/
 	<h1 id="camvidhttpmiengcamacukresearchprojectsvideoreccamvid"><a href="http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/">CamVid</a></h1>
 <h2 id="camvid-export">CamVid export</h2>
 <p>Downloaded file: a zip archive of the following structure:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">taskname.zip/
-├── labelmap.txt <span style="color:#8f5902;font-style:italic"># optional, required for non-CamVid labels</span>
-├── &lt;any_subset_name&gt;/
-<span style="color:#000;font-weight:bold">|</span>   ├── image1.png
-<span style="color:#000;font-weight:bold">|</span>   └── image2.png
-├── &lt;any_subset_name&gt;annot/
-<span style="color:#000;font-weight:bold">|</span>   ├── image1.png
-<span style="color:#000;font-weight:bold">|</span>   └── image2.png
-└── &lt;any_subset_name&gt;.txt
-
-<span style="color:#8f5902;font-style:italic"># labelmap.txt</span>
-<span style="color:#8f5902;font-style:italic"># color (RGB) label</span>
-<span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#0000cf;font-weight:bold">0</span> Void
-<span style="color:#0000cf;font-weight:bold">64</span> <span style="color:#0000cf;font-weight:bold">128</span> <span style="color:#0000cf;font-weight:bold">64</span> Animal
-<span style="color:#0000cf;font-weight:bold">192</span> <span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#0000cf;font-weight:bold">128</span> Archway
-<span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#0000cf;font-weight:bold">128</span> <span style="color:#0000cf;font-weight:bold">192</span> Bicyclist
-<span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#0000cf;font-weight:bold">128</span> <span style="color:#0000cf;font-weight:bold">64</span> Bridge
-</code></pre></div><p>Mask is a <code>png</code> image with 1 or 3 channels where each pixel
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>taskname.zip/
+</span></span><span style="display:flex;"><span>├── labelmap.txt <span style="color:#8f5902;font-style:italic"># optional, required for non-CamVid labels</span>
+</span></span><span style="display:flex;"><span>├── &lt;any_subset_name&gt;/
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">|</span>   ├── image1.png
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">|</span>   └── image2.png
+</span></span><span style="display:flex;"><span>├── &lt;any_subset_name&gt;annot/
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">|</span>   ├── image1.png
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">|</span>   └── image2.png
+</span></span><span style="display:flex;"><span>└── &lt;any_subset_name&gt;.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># labelmap.txt</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># color (RGB) label</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#0000cf;font-weight:bold">0</span> Void
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">64</span> <span style="color:#0000cf;font-weight:bold">128</span> <span style="color:#0000cf;font-weight:bold">64</span> Animal
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">192</span> <span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#0000cf;font-weight:bold">128</span> Archway
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#0000cf;font-weight:bold">128</span> <span style="color:#0000cf;font-weight:bold">192</span> Bicyclist
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#0000cf;font-weight:bold">128</span> <span style="color:#0000cf;font-weight:bold">64</span> Bridge
+</span></span></code></pre></div><p>Mask is a <code>png</code> image with 1 or 3 channels where each pixel
 has own color which corresponds to a label.
 <code>(0, 0, 0)</code> is used for background by default.</p>
 <ul>
@@ -1294,21 +1227,21 @@ has own color which corresponds to a label.
 	<h1 id="vggface2httpsgithubcomox-vggvgg_face2"><a href="https://github.com/ox-vgg/vgg_face2">VGGFace2</a></h1>
 <h2 id="vggface2-export">VGGFace2 export</h2>
 <p>Downloaded file: a zip archive of the following structure:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">taskname.zip/
-├── labels.txt <span style="color:#8f5902;font-style:italic"># optional</span>
-├── &lt;any_subset_name&gt;/
-<span style="color:#000;font-weight:bold">|</span>   ├── label0/
-<span style="color:#000;font-weight:bold">|</span>   <span style="color:#000;font-weight:bold">|</span>   └── image1.jpg
-<span style="color:#000;font-weight:bold">|</span>   └── label1/
-<span style="color:#000;font-weight:bold">|</span>       └── image2.jpg
-└── bb_landmark/
-    ├── loose_bb_&lt;any_subset_name&gt;.csv
-    └── loose_landmark_&lt;any_subset_name&gt;.csv
-<span style="color:#8f5902;font-style:italic"># labels.txt</span>
-<span style="color:#8f5902;font-style:italic"># n000001 car</span>
-label0 &lt;class0&gt;
-label1 &lt;class1&gt;
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>taskname.zip/
+</span></span><span style="display:flex;"><span>├── labels.txt <span style="color:#8f5902;font-style:italic"># optional</span>
+</span></span><span style="display:flex;"><span>├── &lt;any_subset_name&gt;/
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">|</span>   ├── label0/
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">|</span>   <span style="color:#000;font-weight:bold">|</span>   └── image1.jpg
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">|</span>   └── label1/
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">|</span>       └── image2.jpg
+</span></span><span style="display:flex;"><span>└── bb_landmark/
+</span></span><span style="display:flex;"><span>    ├── loose_bb_&lt;any_subset_name&gt;.csv
+</span></span><span style="display:flex;"><span>    └── loose_landmark_&lt;any_subset_name&gt;.csv
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># labels.txt</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># n000001 car</span>
+</span></span><span style="display:flex;"><span>label0 &lt;class0&gt;
+</span></span><span style="display:flex;"><span>label1 &lt;class1&gt;
+</span></span></code></pre></div><ul>
 <li>supported annotations: Rectangles, Points (landmarks - groups of 5 points)</li>
 </ul>
 <h2 id="vggface2-import">VGGFace2 import</h2>
@@ -1336,26 +1269,26 @@ label1 &lt;class1&gt;
 	<h1 id="market-1501httpswwwaitribunecomdataset2018051063"><a href="https://www.aitribune.com/dataset/2018051063">Market-1501</a></h1>
 <h2 id="market-1501-export">Market-1501 export</h2>
 <p>Downloaded file: a zip archive of the following structure:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">taskname.zip/
-├── bounding_box_&lt;any_subset_name&gt;/
-│   └── image_name_1.jpg
-└── query
-    ├── image_name_2.jpg
-    └── image_name_3.jpg
-<span style="color:#8f5902;font-style:italic"># if we keep only annotation:</span>
-taskname.zip/
-└── images_&lt;any_subset_name&gt;.txt
-<span style="color:#8f5902;font-style:italic"># images_&lt;any_subset_name&gt;.txt</span>
-query/image_name_1.jpg
-bounding_box_&lt;any_subset_name&gt;/image_name_2.jpg
-bounding_box_&lt;any_subset_name&gt;/image_name_3.jpg
-<span style="color:#8f5902;font-style:italic"># image_name = 0001_c1s1_000015_00.jpg</span>
-<span style="color:#0000cf;font-weight:bold">0001</span> - person id
-c1 - camera id <span style="color:#ce5c00;font-weight:bold">(</span>there are totally <span style="color:#0000cf;font-weight:bold">6</span> cameras<span style="color:#ce5c00;font-weight:bold">)</span>
-s1 - sequence
-<span style="color:#0000cf;font-weight:bold">000015</span> - frame number in sequence
-<span style="color:#0000cf;font-weight:bold">00</span> - means that this bounding box is the first one among the several
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>taskname.zip/
+</span></span><span style="display:flex;"><span>├── bounding_box_&lt;any_subset_name&gt;/
+</span></span><span style="display:flex;"><span>│   └── image_name_1.jpg
+</span></span><span style="display:flex;"><span>└── query
+</span></span><span style="display:flex;"><span>    ├── image_name_2.jpg
+</span></span><span style="display:flex;"><span>    └── image_name_3.jpg
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># if we keep only annotation:</span>
+</span></span><span style="display:flex;"><span>taskname.zip/
+</span></span><span style="display:flex;"><span>└── images_&lt;any_subset_name&gt;.txt
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># images_&lt;any_subset_name&gt;.txt</span>
+</span></span><span style="display:flex;"><span>query/image_name_1.jpg
+</span></span><span style="display:flex;"><span>bounding_box_&lt;any_subset_name&gt;/image_name_2.jpg
+</span></span><span style="display:flex;"><span>bounding_box_&lt;any_subset_name&gt;/image_name_3.jpg
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># image_name = 0001_c1s1_000015_00.jpg</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">0001</span> - person id
+</span></span><span style="display:flex;"><span>c1 - camera id <span style="color:#ce5c00;font-weight:bold">(</span>there are totally <span style="color:#0000cf;font-weight:bold">6</span> cameras<span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>s1 - sequence
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">000015</span> - frame number in sequence
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">00</span> - means that this bounding box is the first one among the several
+</span></span></code></pre></div><ul>
 <li>supported annotations: Label <code>market-1501</code> with attributes (<code>query</code>, <code>person_id</code>, <code>camera_id</code>)</li>
 </ul>
 <h2 id="market-1501-import">Market-1501 import</h2>
@@ -1383,35 +1316,35 @@ s1 - sequence
 	<h1 id="icdar1315httpsrrccvcuabesch2"><a href="https://rrc.cvc.uab.es/?ch=2">ICDAR13/15</a></h1>
 <h2 id="icdar1315-export">ICDAR13/15 export</h2>
 <p>Downloaded file: a zip archive of the following structure:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># word recognition task</span>
-taskname.zip/
-└── word_recognition/
-    └── &lt;any_subset_name&gt;/
-        ├── images
-        <span style="color:#000;font-weight:bold">|</span>   ├── word1.png
-        <span style="color:#000;font-weight:bold">|</span>   └── word2.png
-        └── gt.txt
-<span style="color:#8f5902;font-style:italic"># text localization task</span>
-taskname.zip/
-└── text_localization/
-    └── &lt;any_subset_name&gt;/
-        ├── images
-        <span style="color:#000;font-weight:bold">|</span>   ├── img_1.png
-        <span style="color:#000;font-weight:bold">|</span>   └── img_2.png
-        ├── gt_img_1.txt
-        └── gt_img_1.txt
-<span style="color:#8f5902;font-style:italic">#text segmentation task</span>
-taskname.zip/
-└── text_localization/
-    └── &lt;any_subset_name&gt;/
-        ├── images
-        <span style="color:#000;font-weight:bold">|</span>   ├── 1.png
-        <span style="color:#000;font-weight:bold">|</span>   └── 2.png
-        ├── 1_GT.bmp
-        ├── 1_GT.txt
-        ├── 2_GT.bmp
-        └── 2_GT.txt
-</code></pre></div><p><strong>Word recognition task</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># word recognition task</span>
+</span></span><span style="display:flex;"><span>taskname.zip/
+</span></span><span style="display:flex;"><span>└── word_recognition/
+</span></span><span style="display:flex;"><span>    └── &lt;any_subset_name&gt;/
+</span></span><span style="display:flex;"><span>        ├── images
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">|</span>   ├── word1.png
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">|</span>   └── word2.png
+</span></span><span style="display:flex;"><span>        └── gt.txt
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># text localization task</span>
+</span></span><span style="display:flex;"><span>taskname.zip/
+</span></span><span style="display:flex;"><span>└── text_localization/
+</span></span><span style="display:flex;"><span>    └── &lt;any_subset_name&gt;/
+</span></span><span style="display:flex;"><span>        ├── images
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">|</span>   ├── img_1.png
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">|</span>   └── img_2.png
+</span></span><span style="display:flex;"><span>        ├── gt_img_1.txt
+</span></span><span style="display:flex;"><span>        └── gt_img_1.txt
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">#text segmentation task</span>
+</span></span><span style="display:flex;"><span>taskname.zip/
+</span></span><span style="display:flex;"><span>└── text_localization/
+</span></span><span style="display:flex;"><span>    └── &lt;any_subset_name&gt;/
+</span></span><span style="display:flex;"><span>        ├── images
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">|</span>   ├── 1.png
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">|</span>   └── 2.png
+</span></span><span style="display:flex;"><span>        ├── 1_GT.bmp
+</span></span><span style="display:flex;"><span>        ├── 1_GT.txt
+</span></span><span style="display:flex;"><span>        ├── 2_GT.bmp
+</span></span><span style="display:flex;"><span>        └── 2_GT.txt
+</span></span></code></pre></div><p><strong>Word recognition task</strong>:</p>
 <ul>
 <li>supported annotations: Label <code>icdar</code> with attribute <code>caption</code></li>
 </ul>
@@ -1455,30 +1388,29 @@ and attributes <code>index</code>, <code>text</code>, <code>color</code>, <code>
           </main>
         </div>
       </div>
-      
-<footer class="bg-dark py-5 row d-print-none">
-  <div class="container-fluid mx-sm-5">
+      <footer class="bg-dark py-5 row d-print-none" style="min-height: 0">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-6 col-sm-2 text-xs-center order-sm-2">
+      <div class="col text-center">
         
         
         
 <ul class="list-inline mb-0">
   
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Gitter public chat" aria-label="Gitter public chat">
+  <li class="list-inline-item mx-2 h3" data-bs-toggle="tooltip" data-placement="top" title="Gitter public chat" aria-label="Gitter public chat">
     <a class="text-white" rel="noopener noreferrer" href="https://gitter.im/opencv-cvat/public">
       <i class="fab fa-gitter"></i>
     </a>
   </li>
   
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Stack Overflow" aria-label="Stack Overflow">
+  <li class="list-inline-item mx-2 h3" data-bs-toggle="tooltip" data-placement="top" title="Stack Overflow" aria-label="Stack Overflow">
     <a class="text-white" rel="noopener noreferrer" href="https://stackoverflow.com/search?q=%23cvat">
       <i class="fab fa-stack-overflow"></i>
     </a>
   </li>
   
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="YouTube" aria-label="YouTube">
-    <a class="text-white" rel="noopener noreferrer" href="https://www.youtube.com/user/nmanovic">
+  <li class="list-inline-item mx-2 h3" data-bs-toggle="tooltip" data-placement="top" title="YouTube" aria-label="YouTube">
+    <a class="text-white" rel="noopener noreferrer" href="https://www.youtube.com/@cvat-ai">
       <i class="fab fa-youtube"></i>
     </a>
   </li>
@@ -1488,27 +1420,40 @@ and attributes <code>index</code>, <code>text</code>, <code>color</code>, <code>
         
         
       </div>
-      <div class="col-6 col-sm-2 text-right text-xs-center order-sm-3">
+      <div class="col-4 text-center">
+        <div class="row">
+          <a href="https://www.cvat.ai/privacy">Privacy Policy</a>
+        </div>
+        <div class="row">
+          <a href="https://www.cvat.ai/terms-of-use">Terms of Use</a>
+        </div>
+        <div class="row">
+          
+            <p><a href="../../../../../about/">About</a></p>
+          
+        </div>
+      </div>
+      <div class="col text-right text-center">
         
         
         
 <ul class="list-inline mb-0">
   
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
+  <li class="list-inline-item mx-2 h3" data-bs-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
     <a class="text-white" rel="noopener noreferrer" href="https://github.com/cvat-ai/cvat">
       <i class="fab fa-github"></i>
     </a>
   </li>
   
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Forum on Intel Developer Zone" aria-label="Forum on Intel Developer Zone">
-    <a class="text-white" rel="noopener noreferrer" href="https://community.intel.com/t5/Intel-Distribution-of-OpenVINO/bd-p/distribution-openvino-toolkit">
-      <i class="fas fa-envelope"></i>
+  <li class="list-inline-item mx-2 h3" data-bs-toggle="tooltip" data-placement="top" title="Gitter developers chat" aria-label="Gitter developers chat">
+    <a class="text-white" rel="noopener noreferrer" href="https://gitter.im/opencv-cvat/dev">
+      <i class="fab fa-gitter"></i>
     </a>
   </li>
   
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Gitter developers chat" aria-label="Gitter developers chat">
-    <a class="text-white" rel="noopener noreferrer" href="https://gitter.im/opencv-cvat/dev">
-      <i class="fab fa-gitter"></i>
+  <li class="list-inline-item mx-2 h3" data-bs-toggle="tooltip" data-placement="top" title="Discord chat" aria-label="Discord chat">
+    <a class="text-white" rel="noopener noreferrer" href="https://discord.gg/fNR3eXfk6C">
+      <i class="fab fa-discord"></i>
     </a>
   </li>
   
@@ -1517,55 +1462,17 @@ and attributes <code>index</code>, <code>text</code>, <code>color</code>, <code>
         
         
       </div>
-      <div class="col-12 col-sm-8 text-center order-sm-2">
-        <small class="mr-1"><a href="https://www.intel.com/content/www/us/en/privacy/intel-privacy-notice.html">Privacy Policy</a></small>
-        |
-        <small class="mx-1"><a href="https://www.intel.com/content/www/us/en/legal/terms-of-use.html">Terms of Use</a></small>
-        |
-        <small class="ml-1"><a href="https://cvat.org/api/restrictions/terms-of-use">CVAT terms of Use</a></small>
-        <br/>
-        <div class="footer-disclaimer text-white ">
-          <small>Intel technologies may require enabled hardware, software or service activation. // No product or component can be absolutely secure. // Your costs and results may vary. // Performance varies by use, configuration and other factors. // See our complete legal <u><a href="https://edc.intel.com/content/www/us/en/products/performance/benchmarks/overview/?r=219444055">Notices and Disclaimers</a></u>. // Intel is committed to respecting human rights and avoiding complicity in human rights abuses. See Intel’s <a href="https://www.intel.com/content/www/us/en/policy/policy-human-rights.html"><u>Global Human Rights Principles</u></a>. Intel’s products and software are intended only to be used in applications that do not cause or contribute to a violation of an internationally recognized human right.</small>
-      </div>
-  
-    <p class="mt-2"><a href="../../../../../about/">About</a></p>
-  
-      </div>
     </div>
   </div>
 </footer>
 
 
+
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="../../../../../js/main.min.3b172c13b62c2bea8b1c9d2599cddc8cf89718a92d792c680871c81ba43d8c85.js" integrity="sha256-OxcsE7YsK&#43;qLHJ0lmc3cjPiXGKkteSxoCHHIG6Q9jIU=" crossorigin="anonymous"></script>
-
-
-
+    
+  <script src="../../../../../js/main.min.99abe30f7fb05785a480d405ee1665ebd520cec6bbadffe966b7737e103675b8.js" integrity="sha256-mavjD3&#43;wV4WkgNQF7hZl69Ugzsa7rf/pZrdzfhA2dbg=" crossorigin="anonymous"></script>
 <script src='../../../../../js/prism.js'></script>
-
-
+<script src='../../../../../js/tabpane-persist.js'></script>
 
   </body>
 </html>
